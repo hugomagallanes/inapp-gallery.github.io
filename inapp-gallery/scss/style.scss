@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+
+
+
+/* ---------->>> VARIABLES <<<-----------*/
+
+// Colors
+$black: #1E1E1E;
+$white: #fff;
+$grey: #9A9A9A;
+$orange: #E0432C;
+
+
+// Type
+@mixin AtlasGrotesk-Regular-Web {
+  font-family: 'Atlas Grotesk Web';
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@mixin AtlasGrotesk-Medium-Web {
+  font-family: 'Atlas Grotesk Web';
+  font-weight:  500;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@mixin AtlasGrotesk-Light-Web {
+  font-family: 'Atlas Grotesk Web';
+  font-weight:  100;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+
+/* ---------->>> LAYOUT <<<-----------*/
+html,
+body {
+  height: 100%;
+  margin: 0
+}
+
+.flex-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  /* Shorthand for:
+  flex-direction: column; (Same as row but top to bottom)
+  flex-wrapper: nowrap ; (default - All flex items will be on one line)
+  */
+  height: 100%;
+
+  .content {
+    display: flex;
+    flex: 1 1 auto;
+  }
+}
+
+.containerFull {
+  display: flex;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+
+  aside {
+    flex-basis: 35%;
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+    }
+  }
+
+  section {
+    flex-basis: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    overflow: scroll;
+
+    .full {
+      flex-basis: 100%;
+    }
+
+  }
+}
+
+
+/* ---------->>> TYPOGRAPHY <<<-----------*/
+
+body {
+  @include AtlasGrotesk-Regular-Web;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 16px;
+  line-height: 28px;
+  @include AtlasGrotesk-Medium-Web;
+}
+
+h3 {
+  font-size: 32px;
+  color: $white;
+  @include AtlasGrotesk-Light-Web;
+
+}
+
+
+
+
+p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+a {
+  text-decoration: none;
+  color: $grey;
+}
+
+/* ---------->>> STYLING/SPACING <<<-----------*/
+
+body {
+  background-color: $black;
+}
+
+aside {
+  background-color: white;
+  padding: 40px 20px 20px 20px;
+
+  h1 {
+    margin-bottom: 80px;
+
+    span {
+      display: none;
+    }
+  }
+
+  h2 {
+    margin-bottom: 12px;
+  }
+
+  nav {
+    margin-top: 60px;
+
+    ul > li {
+      margin-bottom: 20px;
+
+      .currentPage {
+        border-bottom: 1px solid $orange;
+        color: $orange
+      }
+
+      .disabledPage {
+        opacity: .2
+      }
+
+      span {
+        &:hover {
+          color: $orange;
+        }
+      }
+
+      .disabledPage>span:hover {
+        border: none;
+        color: $grey;
+      }
+
+    }
+  }
+
+  .caption {
+    font-size: 14px;
+    color: #bdbdbd;
+  }
+}
+
+
+section {
+  margin: 20px 40px 40px 40px;
+
+  h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+
+
+
+.card {
+  width: 300px;
+  height: 600px;
+  padding: 10px;
+  margin-bottom: 140px;
+
+  .details {
+    margin-top: 24px;
+    color: $white;
+
+    .title {
+      margin-bottom: 12px;
+      @include AtlasGrotesk-Medium-Web;
+    }
+
+    .description {
+      margin-bottom: 28px;
+    }
+
+    .preview {
+      color: $grey;
+      padding-bottom: 3px;
+      border-bottom: 1px solid $grey;
+
+      &:hover {
+        color: $orange;
+        border-color: $orange;
+      }
+
+    }
+
+    span > img {
+      position: relative;
+      top: 1px;
+      height: 14px;
+    }
+  }
+}

@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
+/* ---------->>> VARIABLES <<<-----------*/
+/* ---------->>> LAYOUT <<<-----------*/
+html,
+body {
+  height: 100%;
+  margin: 0; }
+
+.flex-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  /* Shorthand for:
+  flex-direction: column; (Same as row but top to bottom)
+  flex-wrapper: nowrap ; (default - All flex items will be on one line)
+  */
+  height: 100%; }
+  .flex-wrapper .content {
+    display: flex;
+    flex: 1 1 auto; }
+
+.containerFull {
+  display: flex;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0; }
+  .containerFull aside {
+    flex-basis: 35%; }
+    .containerFull aside footer {
+      position: absolute;
+      bottom: 20px; }
+  .containerFull section {
+    flex-basis: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    overflow: scroll; }
+    .containerFull section .full {
+      flex-basis: 100%; }
+
+/* ---------->>> TYPOGRAPHY <<<-----------*/
+body {
+  font-family: 'Atlas Grotesk Web';
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal; }
+
+h1 {
+  font-size: 30px;
+  font-weight: 300; }
+
+h2 {
+  font-size: 16px;
+  line-height: 28px;
+  font-family: 'Atlas Grotesk Web';
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal; }
+
+h3 {
+  font-size: 32px;
+  color: #fff;
+  font-family: 'Atlas Grotesk Web';
+  font-weight: 100;
+  font-style: normal;
+  font-stretch: normal; }
+
+p {
+  font-size: 16px;
+  line-height: 24px; }
+
+a {
+  text-decoration: none;
+  color: #9A9A9A; }
+
+/* ---------->>> STYLING/SPACING <<<-----------*/
+body {
+  background-color: #1E1E1E; }
+
+aside {
+  background-color: white;
+  padding: 40px 20px 20px 20px; }
+  aside h1 {
+    margin-bottom: 80px; }
+    aside h1 span {
+      display: none; }
+  aside h2 {
+    margin-bottom: 12px; }
+  aside nav {
+    margin-top: 60px; }
+    aside nav ul > li {
+      margin-bottom: 20px; }
+      aside nav ul > li .currentPage {
+        border-bottom: 1px solid #E0432C;
+        color: #E0432C; }
+      aside nav ul > li .disabledPage {
+        opacity: 0.2; }
+      aside nav ul > li span:hover {
+        color: #E0432C; }
+      aside nav ul > li .disabledPage > span:hover {
+        border: none;
+        color: #9A9A9A; }
+  aside .caption {
+    font-size: 14px;
+    color: #bdbdbd; }
+
+section {
+  margin: 20px 40px 40px 40px; }
+  section h3 {
+    margin-top: 20px;
+    margin-bottom: 20px; }
+
+.card {
+  width: 300px;
+  height: 600px;
+  padding: 10px;
+  margin-bottom: 140px; }
+  .card .details {
+    margin-top: 24px;
+    color: #fff; }
+    .card .details .title {
+      margin-bottom: 12px;
+      font-family: 'Atlas Grotesk Web';
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal; }
+    .card .details .description {
+      margin-bottom: 28px; }
+    .card .details .preview {
+      color: #9A9A9A;
+      padding-bottom: 3px;
+      border-bottom: 1px solid #9A9A9A; }
+      .card .details .preview:hover {
+        color: #E0432C;
+        border-color: #E0432C; }
+    .card .details span > img {
+      position: relative;
+      top: 1px;
+      height: 14px; }
